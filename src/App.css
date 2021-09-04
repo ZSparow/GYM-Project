@@ -1,12 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.blurred-seciton {
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 10px;
+  border-radius: 10px;
+  direction: rtl;
+  padding: 10px;
+  z-index: 1;
+}
+
+.user-section {
+  height: 70vh;
+  overflow-y: scroll;
+}
+
+.user-section::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+.new-user-section {
+  max-height: 25vh;
+}
+
+.new-user-section h2 {
+  margin-bottom: 10px;
+}
+
+.new-user-section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .App {
   position: relative;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 2fr 1fr;
-
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+  -ms-grid-rows: 2fr 1fr;
+      grid-template-rows: 2fr 1fr;
+  height: 100vh;
+  width: 100vw;
 }
-.blur-background{
-  filter: blur(1px);
+
+.App .blur-background {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -17,25 +72,204 @@
   z-index: 1;
   width: 100%;
   height: 100%;
-  background-image: url('./images/hero.jpg');
   background-position: center;
   background-size: cover;
-  
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
 
 .Course-Section {
-  grid-row-end: span 2;
+  -ms-grid-row-span: 2;
+      grid-row-end: span 2;
+  height: 98vh;
+  overflow-y: scroll;
 }
-.blurred-seciton {
-  background-color: rgba(255,255,255, .5);
-  margin: 10px;
-  border-radius: 10px;
-  direction: rtl;
-  padding: 10px;
-  z-index: 1;
+
+.Course-Section::-webkit-scrollbar {
+  background-color: transparent;
 }
+
+.Course-Section h1 {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.Course-Section .day {
+  margin-bottom: 20px;
+}
+
+.Course-Section .day h2 {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.Course-Section .first-day {
+  margin-top: 40px;
+}
+
+.Course-Section .PracticeSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.Course-Section .PracticeSection .input-field {
+  margin-left: 10px;
+}
+
+.Course-Section .PracticeSection .input-field:last-of-type {
+  max-width: 25% !important;
+}
+
+.Course-Section .PracticeSection .input-field:last-of-type label {
+  width: 50%;
+}
+
+.Course-Section .PracticeSection .input-field:last-of-type input {
+  width: 80%;
+}
+
+.user-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.301);
+}
+
+.user-field .main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 78%;
+}
+
+.user-field img {
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  margin-left: 10px;
+}
+
+.user-field .container h3 {
+  margin-bottom: 5px;
+}
+
+.user-field .inner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 5px;
+}
+
+.user-field .inner-container p {
+  font-size: 15px;
+}
+
+.user-field .status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 25%;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.user-field .status.active {
+  color: green;
+}
+
+.user-field .status.about {
+  color: orange;
+}
+
+.user-field .status.end {
+  color: red;
+}
+
+.input-field {
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 100%;
+  padding: 5px;
+  max-width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.input-field label {
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.input-field input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  width: 70%;
+  font-size: 16px;
+}
+
+.searchBar {
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 100%;
+  padding: 5px;
+  max-width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.searchBar .search-icon {
+  margin-left: 10px;
+}
+
+.searchBar input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  width: 70%;
+}
+
+.AddBtn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 100%;
+  padding: 5px;
+  max-width: 150px;
+  margin-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+/*# sourceMappingURL=App.css.map */
