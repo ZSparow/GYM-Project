@@ -5,7 +5,7 @@ function UserField({ name, weight, height, status, image }) {
     return (
         <div className="user-field">
             <div className="main-container">
-                <img src={`${image === "avatar" ? "./fitness.svg" : image}`} alt="this is user" />
+                <img src={`${image || "./fitness.svg" }`} alt="this is user" />
                 <div className="container" >
                     <h3> {`${name} `}</h3>
                     <div className="inner-container">

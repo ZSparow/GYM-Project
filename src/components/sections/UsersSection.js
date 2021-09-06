@@ -1,7 +1,7 @@
 import React from 'react'
 import SearchBar from '../items/SearchBar'
 import UserField from '../items/UserField'
-import Data from '../../data/Users.json'
+// import Data from '../../data/Users.json'
 function UsersSection() {
     const today = new Date("2021/8/25"),
         date = today.getFullYear() + '/' + (today.getMonth() + 1) + '/' + today.getDate();
@@ -13,7 +13,8 @@ function UsersSection() {
     return (
         <div className="user-section blurred-seciton">
             <SearchBar />
-            {
+            <UserField name={"زياد طارق حسين"} weight={123} height={234}status={"مفعل"} ima/>
+            {/* {
                 Data.map(element => {
 
                     let date1 = new Date(date);
@@ -37,7 +38,7 @@ function UsersSection() {
 
 
 
-            }
+            } */}
 
 
         </div>
